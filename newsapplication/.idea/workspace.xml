@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6387925b-71aa-4dbc-a32e-212030a080fe" name="Default Changelist" comment="" />
+    <list default="true" id="6387925b-71aa-4dbc-a32e-212030a080fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +15,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="JsBowerSettings">
     <node-interpreter value="project" />
@@ -26,6 +31,7 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1dMJBJONHt20LPJCOp51rlq4ww3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -33,8 +39,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
@@ -87,6 +95,7 @@
       <workItem from="1592233775230" duration="439000" />
       <workItem from="1592234453688" duration="10000" />
       <workItem from="1592234484658" duration="515000" />
+      <workItem from="1592236772249" duration="139000" />
     </task>
     <servers />
   </component>

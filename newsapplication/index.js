@@ -6,6 +6,7 @@ const chalk = require('chalk');
 
 const UserRouter = require("./routes/user");
 const LoginRouter = require("./routes/login");
+const LogoutRouter = require("./routes/logout");
 
 const UserModel = require('./models/user');
 
@@ -36,6 +37,7 @@ app.use((req, res, next) => {
 
 app.use("/user", UserRouter);
 app.use("/login", LoginRouter);
+app.use("/logout", LoginRouter);
 
 
 app.listen(PORT, (err) => {
