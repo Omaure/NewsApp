@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6387925b-71aa-4dbc-a32e-212030a080fe" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="/usr/local/lib/node_modules/bower" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1dMJBJONHt20LPJCOp51rlq4ww3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.16.2" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.vagrant" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6387925b-71aa-4dbc-a32e-212030a080fe" name="Default Changelist" comment="" />
+      <created>1592228892056</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592228892056</updated>
+      <workItem from="1592228895052" duration="190000" />
+      <workItem from="1592229259698" duration="189000" />
+      <workItem from="1592229469596" duration="31000" />
+      <workItem from="1592229707398" duration="244000" />
+      <workItem from="1592230058101" duration="5000" />
+      <workItem from="1592230078720" duration="13000" />
+      <workItem from="1592230120855" duration="879000" />
+      <workItem from="1592231339317" duration="18000" />
+      <workItem from="1592231408866" duration="6000" />
+      <workItem from="1592231422377" duration="28000" />
+      <workItem from="1592231466844" duration="21000" />
+      <workItem from="1592231515879" duration="32000" />
+      <workItem from="1592231559107" duration="73000" />
+      <workItem from="1592231643982" duration="8000" />
+      <workItem from="1592231718011" duration="14000" />
+      <workItem from="1592231744939" duration="24000" />
+      <workItem from="1592231782003" duration="8000" />
+      <workItem from="1592231795768" duration="224000" />
+      <workItem from="1592232734414" duration="7000" />
+      <workItem from="1592232762885" duration="11000" />
+      <workItem from="1592232782260" duration="6000" />
+      <workItem from="1592232800960" duration="177000" />
+      <workItem from="1592233017719" duration="56000" />
+      <workItem from="1592233166000" duration="32000" />
+      <workItem from="1592233218370" duration="35000" />
+      <workItem from="1592233277787" duration="59000" />
+      <workItem from="1592233379964" duration="69000" />
+      <workItem from="1592233475848" duration="32000" />
+      <workItem from="1592233702235" duration="47000" />
+      <workItem from="1592233775230" duration="439000" />
+      <workItem from="1592234453688" duration="10000" />
+      <workItem from="1592234484658" duration="515000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
