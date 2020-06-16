@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
     const usermail = req.body.email;
-    const password = req.body.pass;
+    const password = req.body.password;
     console.log("======", usermail, "============", password);
     console.log("------------", JSON.stringify(req.body));
 

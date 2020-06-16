@@ -7,6 +7,8 @@ const chalk = require('chalk');
 const UserRouter = require("./routes/user");
 const LoginRouter = require("./routes/login");
 const LogoutRouter = require("./routes/logout");
+const SourcesRouter = require("./routes/sources");
+const HomeRouter = require('./routes/home');
 
 const UserModel = require('./models/user');
 
@@ -15,7 +17,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const PORT = 3000;
+const PORT = 3100;
 
 
 mongoose
@@ -37,8 +39,9 @@ app.use((req, res, next) => {
 
 app.use("/user", UserRouter);
 app.use("/login", LoginRouter);
-app.use("/logout", LoginRouter);
-
+app.use("/logout", LogoutRouter);
+app.use("/sources",SourcesRouter);
+app.use('/home',HomeRouter);
 
 app.listen(PORT, (err) => {
     if (!err) {
