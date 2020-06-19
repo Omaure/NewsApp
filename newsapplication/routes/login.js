@@ -13,23 +13,23 @@ router.post('/', async (req, res) => {
     console.log("------------", JSON.stringify(req.body));
 
     try {
-        const user = await userModel.find({email: usermail});
+        const currentUser = await userModel.find({email: usermail});
 
-        if (user.length === 0) {
+        if (currentUser.length === 0) {
             res.send(401, "Invalid Information");
         } else {
             // test a matching password
-            user[0].comparePassword(password, async (err, isMatch) => {
+            currentUser[0].comparePassword(password, async (err, isMatch) => {
                 if (err) throw err;
                 if (isMatch) {
-                    if (!user[0].token) {
+                    if (!currentUser[0].token) {
                         const signToken = await jwt.sign({usermail: usermail}, "secretkey");
-                        user[0].token = signToken;
+                        currentUser[0].token = signToken;
                         //save new Token
-                        const result = await userModel.findByIdAndUpdate(user[0]._id, user[0]);
-                        res.send({token: signToken, isAdmin: result.isAdmin});
+                        const result = await userModel.findByIdAndUpdate(currentUser[0]._id, currentUser[0]);
+                        res.send({user: {'name': currentUser[0].fullName}, token: signToken});
                     }
-                    res.send({token: user[0].token, isAdmin: user[0].isAdmin});
+                    res.send({user: {'name': currentUser[0].fullName}, token: currentUser[0].token});
 
                 } else {
                     res.send(401, "Invalid Information");

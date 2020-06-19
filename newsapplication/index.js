@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const helmet = require('helmet');
 const chalk = require('chalk');
 
 const UserRouter = require("./routes/user");
@@ -16,6 +17,7 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(helmet());
 
 const PORT = 3100;
 

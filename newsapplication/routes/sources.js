@@ -17,12 +17,17 @@ const newsapi = new NewsAPI('bcd41b1e72d14e3abec9ec61fcb67db9');
 router.get('/allsources', async (req, res) => {
 
     try {
+
+        const currentUserSubs = await UserModel.find(
+            {token: req.header("JWT")},
+            {_id: 1, sources: 1}
+        );
+
         newsapi.v2.sources({
             category: '',
             language: 'en',
-            country: 'us'
         }).then(response => {
-            res.json(response);
+            res.json({response, 'userSources':currentUserSubs[0].sources} );
         });
     } catch (error) {
         console.log(error);
@@ -33,7 +38,7 @@ router.get('/allsources', async (req, res) => {
 });
 
 
-router.post('/subscribe/:sourceName', async (req, res) => {
+router.post('/subscribe', async (req, res) => {
 
     console.log("Subscribing to Source", req.body);
 
@@ -43,14 +48,14 @@ router.post('/subscribe/:sourceName', async (req, res) => {
             {_id: 1, sources: 1}
         );
 
-        const userSubscribeStatus = currentUserSubs[0].sources.includes(req.params.sourceName);
+        const userSubscribeStatus = currentUserSubs[0].sources.includes(req.body.sourceName);
 
         if (userSubscribeStatus) {
-            res.status(201).json(`You are already Subscribed to ${req.params.sourceName}`);
+            res.status(201).json(`You are already Subscribed to ${req.body.sourceName}`);
         } else {
             const oldSources = currentUserSubs[0].sources;
 
-            currentUserSubs[0].sources = [...oldSources, req.params.sourceName];
+            currentUserSubs[0].sources = [...oldSources, req.body.sourceName];
         }
 
         let results = await UserModel
@@ -65,7 +70,7 @@ router.post('/subscribe/:sourceName', async (req, res) => {
     }
 });
 
-router.post('/unsubscribe/:sourceName', async (req, res) => {
+router.post('/unsubscribe', async (req, res) => {
 
     console.log("Subscribing to Source", req.body);
 
@@ -75,14 +80,14 @@ router.post('/unsubscribe/:sourceName', async (req, res) => {
             {_id: 1, sources: 1}
         );
 
-        const userSubscribeStatus = currentUserSubs[0].sources.includes(req.params.sourceName);
+        const userSubscribeStatus = currentUserSubs[0].sources.includes(req.body.sourceName);
 
         if (userSubscribeStatus) {
             const oldSources = currentUserSubs[0].sources;
-            const newSources = oldSources.filter(source => source !== req.params.sourceName);
+            const newSources = oldSources.filter(source => source !== req.body.sourceName);
             currentUserSubs[0].sources = newSources;
         } else {
-            res.status(201).json(`You are not Subscribed to ${req.params.sourceName}`);
+            res.status(201).json(`You are not Subscribed to ${req.body.sourceName}`);
         }
 
         let results = await UserModel
