@@ -52,6 +52,8 @@
 
 -- [Helmet](https://helmetjs.github.io/) Backend
 
+-- [NewsApi](https://newsapi.org/) Backend
+
 -- [VSCode](https://code.visualstudio.com/) IDE
 
 -- [Webstorm](https://www.jetbrains.com/webstorm/) IDE
