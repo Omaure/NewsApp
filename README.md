@@ -19,7 +19,7 @@
 
 # For Trying
 - Node : 
-    - open newsapplication which is the server
+    - open newsapplicationserver
     - npm install 
     - node index.js
 - React :
