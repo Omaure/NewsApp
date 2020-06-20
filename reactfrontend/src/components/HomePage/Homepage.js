@@ -61,9 +61,10 @@ export default function HomePage() {
             {(() => {
                 if (!currentSubscribtions) {
                     return (
-                       <Link className='font-italic font-weight-bold text-center align-content-center text-secondary' to='/Sources'>
-                           Subscribe to a Source
-                       </Link>
+                        <Link className='font-italic font-weight-bold text-center align-content-center text-secondary'
+                              to='/Sources'>
+                            Subscribe to a Source
+                        </Link>
                     )
                 } else {
                     return (
@@ -131,7 +132,7 @@ export default function HomePage() {
                                                         }
                                                     })()}
                                                     <MDBCardText className='font-weight-bolder font-weight-bold'>
-                                                        {currentArticle.content === null ? "No Info":currentArticle.content}
+                                                        {currentArticle.content === null ? "No Info" : currentArticle.content}
                                                     </MDBCardText>
                                                 </MDBCardBody>
                                             </MDBCard>
