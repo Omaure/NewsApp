@@ -1,20 +1,14 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {
-    MDBContainer,
-    MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol, MDBRow, MDBLink, MDBView, MDBMask
+    MDBBtn, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCol, MDBRow
 } from "mdbreact";
-
 import {FaJoint, IoMdRemoveCircle} from "react-icons/all";
 import './SourcesPage.css';
-
 
 export default function SourcesPage() {
     const [allSources, setallSources] = useState([]);
     const [userSources, setUserSources] = useState([]);
-    let changedSources = [];
-
-    changedSources = userSources;
 
     const subscribeToSource = (sourceName) => {
         axios
@@ -30,11 +24,6 @@ export default function SourcesPage() {
                 console.log("error");
             } else {
                 setUserSources(res.data.sources);
-                window.scroll({
-                    top: 0,
-                    left: 0,
-                    behavior: 'smooth',
-                });
             }
         })
     };
@@ -54,11 +43,6 @@ export default function SourcesPage() {
                 console.log("error");
             } else {
                 setUserSources(res.data.sources);
-                window.scroll({
-                    top: 0,
-                    left: 0,
-                    behavior: 'smooth',
-                });
             }
         })
     };
@@ -86,10 +70,10 @@ export default function SourcesPage() {
         }}>
             <div>
                 <h1 className='font-italic font-weight-bold text-center text-secondary'>
-                    Sources
+                    News Sources
                 </h1>
             </div>
-            <div className='mt-3' style={{
+            <div className='mt-4 mb-4' style={{
                 display: 'flex',
                 flexWrap: 'wrap'
             }}>
@@ -102,7 +86,7 @@ export default function SourcesPage() {
 
                         return (
                             <MDBCol md="4" className='mb-3'>
-                                <MDBCard>
+                                <MDBCard className='h-600'>
                                     <MDBCardBody>
                                         <MDBCardTitle className='text-center font-weight-bold'>
                                             <a className='blue-text text-center' onClick={() => {
@@ -122,7 +106,7 @@ export default function SourcesPage() {
                                                     color="danger"
                                                     rounded
                                                     type="button"
-                                                    className="btn-block z-depth-1 font-weight-bold mb-3"
+                                                    className="btn-block z-depth-1 font-weight-bold mt-3"
                                                     onClick={() => {
                                                         unsubscribeFromSource(currentSource.id)
                                                     }}> Unsubscribe
@@ -136,7 +120,7 @@ export default function SourcesPage() {
                                                     color="success"
                                                     rounded
                                                     type="button"
-                                                    className="btn-block z-depth-1 font-weight-bold mb-3"
+                                                    className="btn-block z-depth-1 font-weight-bold mt-3"
                                                     onClick={() => {
                                                         subscribeToSource(currentSource.id)
                                                     }}> Subscribe
@@ -149,12 +133,8 @@ export default function SourcesPage() {
                             </MDBCol>
                         )
                     })}
-
                 </MDBRow>
-
             </div>
         </div>
-
-
     )
 }

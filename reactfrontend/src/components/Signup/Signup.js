@@ -1,22 +1,15 @@
-import React, {useState, useEffect} from "react";
-import axios from "axios";
+import React, {useState} from "react";
 import {
-    MDBContainer,
     MDBRow,
     MDBCol,
     MDBBtn,
     MDBCard,
     MDBInput,
 } from "mdbreact";
-
-import {fetchUser, signUserUp} from "../../actions/userActions";
-
-import {FcHome, FcRegisteredTrademark, FaRegistered} from "react-icons/all";
-import {useDispatch, useSelector} from "react-redux";
-
-
+import {signUserUp} from "../../actions/userActions";
+import {FcRegisteredTrademark, FaRegistered} from "react-icons/all";
+import {useDispatch} from "react-redux";
 import "./Signup.css";
-import {Container} from "react-bootstrap";
 
 export default function RegistrationPage() {
     const [email, setEmail] = useState("");
@@ -27,12 +20,6 @@ export default function RegistrationPage() {
     const [lastName, setLastName] = useState("");
 
     const dispatch = useDispatch();
-
-
-    // useEffect(() => {
-    //     console.log("Ya lahweee" + JSON.stringify(email));
-    // });
-
 
     const validateRegistration = (
         userFirstName,
@@ -75,7 +62,7 @@ export default function RegistrationPage() {
                 className="card-image signupForm w-100 h-100"
                 style={{
                     backgroundImage:
-                        "url(https://previews.123rf.com/images/microone/microone1812/microone181200305/112856531-sketch-vintage-books-seamless-pattern-or-background-sketch-education-seamless-book-for-school-litera.jpg)",
+                        "url(https://media.istockphoto.com/photos/newspapers-with-headlines-on-horizontal-surface-old-newspaper-picture-id1175069864)",
                     width: "40rem",
                     border: "solid grey 2px",
 
@@ -85,9 +72,9 @@ export default function RegistrationPage() {
                     <div className="text-center">
                         <h3 className="white-text mb-2 mt-2 font-weight-bold">
                             <strong>SIGN</strong>
-                            <a href="" className="green-text font-weight-bold">
+                            <span className="green-text font-weight-bold">
                                 <strong> UP <FcRegisteredTrademark/></strong>
-                            </a>
+                            </span>
                         </h3>
                     </div>
                     <MDBInput
@@ -97,7 +84,7 @@ export default function RegistrationPage() {
                         type="email"
                         validate
                         labelClass="white-text"
-                        className="text-success"
+                        className="text-white"
                     />
                     <MDBInput
                         label="Confirm email"
@@ -110,7 +97,7 @@ export default function RegistrationPage() {
                         validate
                         pattern={/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/}
                         labelClass="white-text"
-                        className="m-0 text-success"
+                        className="m-0 text-white"
                     />
                     <MDBRow>
                         <MDBCol>
@@ -124,7 +111,7 @@ export default function RegistrationPage() {
                                 type="password"
                                 validate
                                 labelClass="white-text"
-                                className="md-col-4 m-0 text-success"
+                                className="md-col-4 m-0 white-text"
 
                             />
                         </MDBCol>
@@ -139,7 +126,7 @@ export default function RegistrationPage() {
                                 type="password"
                                 validate
                                 labelClass="white-text"
-                                className="md-col-4 m-0 text-success"
+                                className="md-col-4 m-0 text-white"
                             />
                         </MDBCol>
 
@@ -149,7 +136,7 @@ export default function RegistrationPage() {
                         <MDBCol>
                             <MDBInput
                                 label="Your First Name"
-                                className="text-success"
+                                className="text-white"
 
                                 onChange={(e) => {
                                     setFirstName(e.target.value);
@@ -163,7 +150,7 @@ export default function RegistrationPage() {
                         <MDBCol>
                             <MDBInput
                                 label="Your Last Name"
-                                className="text-success"
+                                className="text-white"
 
                                 onChange={(e) => {
                                     setLastName(e.target.value);
@@ -202,18 +189,8 @@ export default function RegistrationPage() {
                             </MDBBtn>
                         </div>
                     </MDBRow>
-                    <MDBCol md='12'>
-                        <p className='font-small white-text d-flex justify-content-end'>
-                            Already registered?
-                            <a href='/Login' className='green-text ml-1 font-weight-bold'>
-                                Click here to Login
-                            </a>
-                        </p>
-                    </MDBCol>
                 </div>
             </MDBCard>
         </div>
-
-
     );
 }

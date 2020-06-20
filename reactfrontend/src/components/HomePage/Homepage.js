@@ -1,14 +1,10 @@
-import React, {useEffect, useState, useRef} from "react";
-import {Card, Image, Button} from "semantic-ui-react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
-import {Link} from "react-router-dom";
-import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle, MDBCol, MDBRow} from "mdbreact";
-import {Carousel, Container} from "react-bootstrap";
-import NavbarPage from "../Navbar/Navbar";
-import {fetchUser, logoutUser} from "../../actions/userActions";
-import {useDispatch, useSelector, useStore} from "react-redux";
-import {FcNext, FcNews, FcPrevious} from "react-icons/all";
-
+import {MDBBtn, MDBCard, MDBCardBody, MDBCardText, MDBCardTitle, MDBCol, MDBRow} from "mdbreact";
+import {Carousel} from "react-bootstrap";
+import {useDispatch, useStore} from "react-redux";
+import {FcNext, FcPrevious} from "react-icons/all";
+import './Homepage.css'
 
 export default function HomePage() {
 
@@ -31,6 +27,11 @@ export default function HomePage() {
         }).then(result => {
             console.log(result.data);
             setSubscribtion(result.data.articles);
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: 'smooth',
+            });
         });
     };
 
@@ -40,6 +41,11 @@ export default function HomePage() {
 
     const incrementPage = (index) => {
         setCurrentPage(index);
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+        });
     };
 
     const decrementPage = (index) => {
@@ -53,79 +59,119 @@ export default function HomePage() {
                     Top News
                 </h1>
             </div>
-            <Carousel>
-                {
-                    currentSubscribtions.map((currentArticle) => (
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={`${currentArticle.urlToImage}`}
-                                alt={"News Image"}
-                            />
-                            <Carousel.Caption>
-                                <h3>{currentArticle.title}</h3>
-                                <p>{currentArticle.description}</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    ))
-                }
-            </Carousel>
-
-
-            <MDBRow className='flex-1 mt-4'>
-                {currentSubscribtions.map(currentArticle => {
+            {(() => {
+                if (!currentSubscribtions) {
                     return (
-                        <MDBCol md="4" className='mb-3'>
-                            <MDBCard>
-                                <MDBCardBody className='align-items-center'>
-                                    <MDBCardTitle className='text-center font-weight-bold'>
-                                        <a className='blue-text text-center' onClick={() => {
-                                            window.open(`${currentArticle.url}`, '_blank')
-                                        }}>
-                                            {currentArticle.title.toUpperCase()}
-                                        </a>
-                                    </MDBCardTitle>
-                                    <img
-                                        className="d-block w-75 mx-auto mb-3"
-                                        src={`${currentArticle.urlToImage}`}
-                                    />
-                                    <MDBCardText className='font-weight-bold'>
-                                        {currentArticle.description + "..."}
-                                    </MDBCardText>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
+                        <h1>
+                            Please subscribe to a source
+                        </h1>
                     )
-                })}
+                } else {
+                    return (
+                        <div>
+                            <Carousel>
+                                {
+                                    currentSubscribtions.map((currentArticle) => (
+                                        <Carousel.Item>
+                                            {(() => {
+                                                if (currentArticle.urlToImage === "" || currentArticle.urlToImage === null || currentArticle.urlToImage === "null") {
+                                                    return (
+                                                        <img
+                                                            className="d-block w-100"
+                                                            src="https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
+                                                        />
 
-            </MDBRow>
+                                                    )
+                                                } else {
+                                                    return (
+                                                        <img
+                                                            className="d-block w-100"
+                                                            src={`${currentArticle.urlToImage}`}
+                                                            alt={"News Image"}
+                                                        />)
+                                                }
+                                            })()}
+
+                                            <Carousel.Caption>
+                                                <h3 className='red-text font-weight-bold'> Title:{currentArticle.title}</h3>
+                                                <p className='font-weight-bold'>{currentArticle.description}</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    ))
+                                }
+                            </Carousel>
 
 
-            <MDBBtn
-                color="black"
-                rounded
-                type="button"
-                className="btn-block z-depth-1 font-weight-bold mb-3 text-white"
-                onClick={event => {
-                    currentPage > 0 ? setCurrentPage(currentPage - 1) :
-                        alert('This is the first Page');
-                }}>
-                <FcPrevious/>
-                Previous Page
-            </MDBBtn>
+                            <MDBRow className='flex-1 mt-4'>
+                                {currentSubscribtions.map(currentArticle => {
+                                    return (
+                                        <MDBCol md="4" className='mb-3'>
+                                            <MDBCard className='mycard'>
+                                                <MDBCardBody className='align-items-center'>
+                                                    <MDBCardTitle className='text-center font-weight-bold'>
+                                                        <a className='blue-text text-center' onClick={() => {
+                                                            window.open(`${currentArticle.url}`, '_blank')
+                                                        }}>
+                                                            {currentArticle.title.toUpperCase()}
+                                                        </a>
+                                                    </MDBCardTitle>
+                                                    {(() => {
+                                                        if (currentArticle.urlToImage === "" || currentArticle.urlToImage === null || currentArticle.urlToImage === "null") {
+                                                            return (
+                                                                <img
+                                                                    className="d-block w-75 mx-auto mb-3"
+                                                                    src="https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
+                                                                />
+                                                            )
+                                                        } else {
+                                                            return (
+                                                                <img
+                                                                    className="d-block w-75 mx-auto mb-3"
+                                                                    src={`${currentArticle.urlToImage}`}
+                                                                />)
+                                                        }
+                                                    })()}
+                                                    <MDBCardText className='font-weight-bolder font-weight-bold'>
+                                                        {currentArticle.description + "..."}
+                                                    </MDBCardText>
+                                                </MDBCardBody>
+                                            </MDBCard>
+                                        </MDBCol>
+                                    )
+                                })}
 
-            <MDBBtn
-                color="black"
-                rounded
-                type="button"
-                className="btn-block z-depth-1 font-weight-bold mb-3 text-white"
-                onClick={event => {
-                    setCurrentPage(currentPage + 1);
-                }}>
+                            </MDBRow>
 
-                Next Page
-                <FcNext/>
-            </MDBBtn>
+
+                            <MDBBtn
+                                color="black"
+                                rounded
+                                type="button"
+                                className="btn-block z-depth-1 font-weight-bold mb-3 text-white"
+                                onClick={event => {
+                                    currentPage > 0 ? setCurrentPage(currentPage - 1) :
+                                        alert('This is the first Page');
+                                }}>
+                                <FcPrevious/>
+                                Previous Page
+                            </MDBBtn>
+
+                            <MDBBtn
+                                color="black"
+                                rounded
+                                type="button"
+                                className="btn-block z-depth-1 font-weight-bold mb-3 text-white"
+                                onClick={event => {
+                                    setCurrentPage(currentPage + 1);
+                                }}>
+
+                                Next Page
+                                <FcNext/>
+                            </MDBBtn>
+                        </div>)
+                }
+            })()}
+
         </div>
 
 

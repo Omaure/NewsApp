@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3432d14e-071c-484c-8f07-2220b1d50020" name="Default Changelist" comment="" />
+    <list default="true" id="3432d14e-071c-484c-8f07-2220b1d50020" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newsapplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../newsapplication/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/Homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/Homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/Homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NotFound/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFound/NotFoundPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Signup/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Signup/Signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SourcesPage/SourcesPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SourcesPage/SourcesPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SourcesPage/SourcesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SourcesPage/SourcesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/userReducer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +35,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="JsBowerSettings">
     <node-interpreter value="project" />
     <bower-package value="/usr/local/lib/node_modules/bower" />
@@ -30,6 +50,7 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1dOlAGzJNuhV3RXi2O9Gbx7COQH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -37,6 +58,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -93,6 +115,7 @@
       <workItem from="1592347604224" duration="2021000" />
       <workItem from="1592352193924" duration="19014000" />
       <workItem from="1592493866092" duration="35295000" />
+      <workItem from="1592606733777" duration="4684000" />
     </task>
     <servers />
   </component>

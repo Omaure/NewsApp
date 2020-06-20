@@ -25,7 +25,6 @@ export const fetchUser = (email, password) => dispatch => {
             } else {
                 localStorage.setItem("token", res.data.token);
                 dispatch(setUser(res.data.user));
-                // return (window.location = `/Home`);
             }
         });
 };
@@ -42,7 +41,6 @@ export const logoutUser = () => dispatch => {
             console.log("error");
         } else {
             dispatch(logUserOut());
-            return (window.location = `/`);
         }
     });
 };
@@ -59,7 +57,6 @@ export const signUserUp = (fullName, email, password) => dispatch => {
                 console.log("error");
             } else {
                 alert("Registration successful please login")
-                // return (window.location = `/Login`);
             }
         });
 

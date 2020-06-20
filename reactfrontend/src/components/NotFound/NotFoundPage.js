@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 
 import './NotFound.css'
 import {MDBBtn} from "mdbreact";
+
 export default function NotFound(props) {
     return (
         <div className="main">
@@ -312,9 +313,9 @@ export default function NotFound(props) {
                 rounded
                 type="button"
                 className="btn-block z-depth-1 font-weight-bold"
-            onClick={()=>{
-                return window.location = '/'
-            }}>
+                onClick={() => {
+                    return window.location = '/'
+                }}>
                 Go to Home Page
             </MDBBtn>
         </div>

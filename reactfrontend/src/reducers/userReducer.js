@@ -7,7 +7,7 @@ export default function userReducer(state = defaultState, action) {
     console.log("User Reducer");
     switch (action.type) {
         case "SET_USER":
-            Object.assign(state,action);
+            Object.assign(state, action);
             console.log("User is set to online");
             return {
                 ...state,

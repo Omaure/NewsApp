@@ -46,7 +46,6 @@ function App(props) {
                     <NavbarPage/>
                     <Switch>
                         <Route path="/" exact component={HomePage}/>
-                        <Route path="/Home" component={HomePage}/>
                         <Route path="/Sources" component={SourcesPage}/>
                         <Route path="*" component={NotFound}/>
                     </Switch>
@@ -60,45 +59,3 @@ function App(props) {
 
 export default App;
 
-//
-// import React from 'react';
-// import './App.css';
-// import {connect} from 'react-redux'
-// import LoginPage from "./components/Login/Login";
-// import RegistrationPage from "./components/Signup/Signup";
-// // import {autoLogin} from './actions/userActions'
-//
-// class App extends React.Component{
-//
-//     componentDidMount(){
-//         // this.props.autoLogin()
-//     }
-//
-//     render(){
-//         return (
-//             <div className="App">
-//                 {
-//                     // console.log(this.props)
-//                     this.props.userReducer && this.props.userReducer.loggedIn  ?  <h1>Welcome, {this.props.userReducer.user.username}</h1> :<h1>Sign Up or Login!</h1>
-//                 }
-//                 <LoginPage/>
-//                 <RegistrationPage/>
-//                 <button>Logout</button>
-//             </div>
-//         );
-//     }
-// }
-//
-// const mapStateToProps = (state) => {
-//     return {
-//         userReducer: state.userReducer
-//     }
-// };
-//
-// // const mapDispatchToProps = (dispatch) => {
-// //     return {
-// //         autoLogin: () => dispatch(autoLogin())
-// //     }
-// // };
-//
-// export default connect(mapStateToProps)(App);
