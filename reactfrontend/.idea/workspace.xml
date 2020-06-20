@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3432d14e-071c-484c-8f07-2220b1d50020" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../newsapplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../newsapplication/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newsapplication/models/news.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newsapplication/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../newsapplication/routes/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newsapplication/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../newsapplication/routes/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/userActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HomePage/Homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/Homepage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/HomePage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/Homepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFound/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFound/NotFoundPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Signup/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Signup/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SourcesPage/SourcesPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SourcesPage/SourcesPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SourcesPage/SourcesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SourcesPage/SourcesPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WelcomePage/WelcomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/userReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +106,8 @@
       <workItem from="1592347604224" duration="2021000" />
       <workItem from="1592352193924" duration="19014000" />
       <workItem from="1592493866092" duration="35295000" />
-      <workItem from="1592606733777" duration="4684000" />
+      <workItem from="1592606733777" duration="4891000" />
+      <workItem from="1592659700262" duration="1656000" />
     </task>
     <servers />
   </component>

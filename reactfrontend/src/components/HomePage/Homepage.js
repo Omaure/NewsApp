@@ -5,13 +5,12 @@ import {Carousel} from "react-bootstrap";
 import {useDispatch, useStore} from "react-redux";
 import {FcNext, FcPrevious} from "react-icons/all";
 import './Homepage.css'
+import {Link} from "react-router-dom";
 
 export default function HomePage() {
 
     const [currentSubscribtions, setSubscribtion] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    let currentIndex = 1;
-
     const dispatch = useDispatch();
 
     const store = useStore();
@@ -62,9 +61,9 @@ export default function HomePage() {
             {(() => {
                 if (!currentSubscribtions) {
                     return (
-                        <h1>
-                            Please subscribe to a source
-                        </h1>
+                       <Link className='font-italic font-weight-bold text-center align-content-center text-secondary' to='/Sources'>
+                           Subscribe to a Source
+                       </Link>
                     )
                 } else {
                     return (
@@ -132,7 +131,7 @@ export default function HomePage() {
                                                         }
                                                     })()}
                                                     <MDBCardText className='font-weight-bolder font-weight-bold'>
-                                                        {currentArticle.description + "..."}
+                                                        {currentArticle.content === null ? "No Info":currentArticle.content}
                                                     </MDBCardText>
                                                 </MDBCardBody>
                                             </MDBCard>

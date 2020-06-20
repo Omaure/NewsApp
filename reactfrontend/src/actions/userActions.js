@@ -41,6 +41,7 @@ export const logoutUser = () => dispatch => {
             console.log("error");
         } else {
             dispatch(logUserOut());
+            window.location = '/';
         }
     });
 };

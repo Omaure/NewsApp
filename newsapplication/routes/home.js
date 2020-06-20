@@ -32,7 +32,7 @@ router.get('/getnews/:pageNo', async (req, res) => {
 
         const currentSources = userSources[0].sources.reduce((prv, curr, index) => {
             src = src + curr + ",";
-            console.log(src);
+            console.log(chalk.bgRed.white(src));
             return src;
         }, "");
 
